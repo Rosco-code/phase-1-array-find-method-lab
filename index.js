@@ -1,29 +1,27 @@
-const record = [
-  { year: "2015", result: "W"},
-  { year: "2014", result: "N/A"},
-  { year: "2013", result: "L"},
-]
-
-// function superbowlWin(stats) {
-//   let obj = stats.find(o => o.result)
-
-//   if (obj.result === "W") {
-//     return obj.year
+// function superBowlWin(array) {
+  
+//   for (let item of array) {
+//     if (item.result === "W") {
+//       return item.year
+//     }
 //   }
-//   else {
-//     return undefined
-//   }
-
 // }
+// superBowlWin(record)
+
+// let superBowlWin = record.find(obj => obj.result === "W")
+// console.log(superBowlWin)
 
 function superbowlWin(record) {
-  if (record.find (r => r.result === "W")){
-    return (record.find (r => r.result === "W").year)
-  }
-  else {
-    return (record.find (r => r.result === "W")) 
-  }
+  const yearWon = record.find(obj => obj.result === "W")
+  return !!yearWon ? yearWon.year : undefined
 }
 
-
-console.log(superbowlWin(record))
+ // if (yearWon.result === "W") {
+  //   return yearWon.year
+  // }
+  // else if (yearWon.result === "L") {
+  //   return undefined
+  // }
+  // else {
+  //   return undefined
+  // }
